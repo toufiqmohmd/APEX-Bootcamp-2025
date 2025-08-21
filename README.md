@@ -23,7 +23,8 @@ Central repo for APEX Bootcamp resources, scripts, and learning materials.
 ## Important Resources  
 
 ### SQL Workshop  
-- [Workshop Link](https://example.com/sql-workshop)  
+- [Workshop Link](https://example.com/sql-workshop)
+- [Catchup Script](https://github.com/toufiqmohmd/Oracle-APEX-Bootcamp-2025/blob/main/SQLWorkshop/sql-workshop-catchup-script.sql)
 
 ### Oracle APEX Core Concepts for Building Data Driven Apps  
 - [Workshop Link 1](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3528&p210_wec=&session=16208365897850)  
