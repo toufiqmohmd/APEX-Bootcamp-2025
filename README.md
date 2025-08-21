@@ -44,8 +44,7 @@ Central repo for APEX Bootcamp resources, scripts, and learning materials.
 - [Workshop Link](https://roopeshthokala.github.io/apex/employee-onboarding/workshops/tenancy/index.html)
 
 ### GenDev With Oracle APEX & AI  
-- On the fly  
-- Data model and Chatbot  
+- [Workshop Link](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=633)
 
 ### APEX Adoption, Opportunities and the Road Ahead  
 - (Resources to be added if available)  
