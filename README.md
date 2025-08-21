@@ -1,48 +1,37 @@
-# APEX-Bootcamp-2025
+# APEX Bootcamp 2025
 Central repo for APEX Bootcamp resources, scripts, and learning materials.
 
----
+## Agenda
 
-## 1. Oracle APEX Overview: Getting Started
-_No external links provided._
+| Time          | Session Title                                     |
+|---------------|--------------------------------------------------|
+| 11:00 - 13:00 | Oracle APEX Core Concepts for Building Data Driven Apps |
+| 14:00 - 14:30 | Designing Secure APEX Apps with Built-in Features |
+| 14:30 - 15:00 | Themes, Templates & Template Components           |
+| 15:00 - 16:00 | Business Process Automation with Workflows        |
+| 16:00 - 17:00 | GenDev With Oracle APEX & AI                      |
+| 17:00 - 17:30 | APEX Adoption, Opportunities and the Road Ahead   |
 
----
+## Important Resources
 
-## 2. SQL Workshop
-**Links:**  
-- [SQL Workshop HOL](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524&p210_wec=&session=8379360721545)
+### Oracle APEX Core Concepts for Building Data Driven Apps
+- [Workshop Link 1](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3528&p210_wec=&session=16208365897850)  
+- [Workshop Link 2](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3533&p210_wec=&session=8886919533136)  
+- [Workshop Link 3](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3534&p210_wec=&session=5472038135115)  
 
----
+### Designing Secure APEX Apps with Built-in Features
+- [Workshop Link](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3578&p210_wec=&session=108753226205988)  
+- Custom authentication and authorization notes  
 
-## 3. Oracle APEX Core Concepts for Building Data Driven Apps
-**Links:**  
-- [Core Concepts HOL #1](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3528&p210_wec=&session=16208365897850)  
-- [Core Concepts HOL #2](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3533&p210_wec=&session=8886919533136)  
-- [Core Concepts HOL #3](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3534&p210_wec=&session=5472038135115)
+### Themes, Templates & Template Components
+- [Workshop Link](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3551&p210_wec=&session=13886981642268)  
 
----
+### Business Process Automation with Workflows
+- On the fly / Onboarding App  
 
-## 4. Designing Secure APEX Apps with Built-in Features
-**Links:**  
-- [Secure APEX Apps HOL](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3578&p210_wec=&session=108753226205988)
+### GenDev With Oracle APEX & AI
+- On the fly  
+- Data model and Chatbot  
 
----
-
-## 5. Themes, Templates & Template Components
-**Links:**  
-- [Themes & Templates HOL](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3551&p210_wec=&session=13886981642268)
-
----
-
-## 6. Business Process Automation with Workflows
-_No external links provided._
-
----
-
-## 7. GenDev With Oracle APEX & AI
-_No external links provided._
-
----
-
-## 8. APEX Adoption, Opportunities and the Road Ahead
-_No external links provided._
+### APEX Adoption, Opportunities and the Road Ahead
+- (Resources to be added if available)  
