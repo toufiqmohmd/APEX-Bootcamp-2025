@@ -17,20 +17,20 @@ Central repo for APEX Bootcamp resources, scripts, and learning materials.
 ## Important Resources
 
 ### Oracle APEX Core Concepts for Building Data Driven Apps
-- [Workshop Link 1](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3528&p210_wec=&session=16208365897850)  
-- [Workshop Link 2](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3533&p210_wec=&session=8886919533136)  
-- [Workshop Link 3](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3534&p210_wec=&session=5472038135115)  
+- <a href="https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3528&p210_wec=&session=16208365897850" target="_blank">Workshop Link 1</a>  
+- <a href="https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3533&p210_wec=&session=8886919533136" target="_blank">Workshop Link 2</a>  
+- <a href="https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3534&p210_wec=&session=5472038135115" target="_blank">Workshop Link 3</a>  
 
 ### Designing Secure APEX Apps with Built-in Features
-- [Workshop Link](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3578&p210_wec=&session=108753226205988)  
+- <a href="https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3578&p210_wec=&session=108753226205988" target="_blank">Workshop Link</a>  
 - Custom authentication and authorization notes  
 
 ### Themes, Templates & Template Components
-- [Demo Projects App Export](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol11.sql)
-- [Workshop Link](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3551&p210_wec=&session=13886981642268)  
+- <a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol11.sql" target="_blank">Demo Projects App Export</a>  
+- <a href="https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3551&p210_wec=&session=13886981642268" target="_blank">Workshop Link</a>  
 
 ### Business Process Automation with Workflows
-- [Employee On-Boarding App Export](https://github.com/toufiqmohmd/Oracle-APEX-Bootcamp-2025/blob/main/emp_onboarding_catchupscripts.sql)
+- <a href="https://github.com/toufiqmohmd/Oracle-APEX-Bootcamp-2025/blob/main/emp_onboarding_catchupscripts.sql" target="_blank">Employee On-Boarding App Export</a>  
 
 ### GenDev With Oracle APEX & AI
 - On the fly  
