@@ -35,7 +35,7 @@ Central repo for APEX Bootcamp resources, scripts, and learning materials.
 
 ### Business Process Automation with Workflows  
 - [Employee On-Boarding App Export](https://github.com/toufiqmohmd/Oracle-APEX-Bootcamp-2025/blob/main/emp_onboarding_catchupscripts.sql)
-- [Workshop Link](https://samanava.github.io/apex/employee-onboarding/workshops/tenancy/index.html?lab=introduction)
+- [Workshop Link](https://roopeshthokala.github.io/apex/employee-onboarding/workshops/tenancy/index.html)
 
 ### GenDev With Oracle APEX & AI  
 - On the fly  
