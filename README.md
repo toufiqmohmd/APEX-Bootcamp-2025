@@ -1,6 +1,6 @@
 # Oracle APEX Bootcamp 2025  
 
-Central repo for APEX Bootcamp resources, scripts, and learning materials.  
+Central repo for APEX Bootcamp resources, scripts, and learning materials.
 
 ## Agenda  
 
@@ -14,6 +14,10 @@ Central repo for APEX Bootcamp resources, scripts, and learning materials.
 | 15:00 - 16:00 | Business Process Automation with Workflows        |
 | 16:00 - 17:00 | GenDev With Oracle APEX & AI                      |
 | 17:00 - 17:30 | APEX Adoption, Opportunities and the Road Ahead   |
+
+## Workspace Details
+[APEX URL](https://jb7mfvfk4wteln6-japacbootcamp.adb.us-ashburn-1.oraclecloudapps.com/ords/r/apex/workspace-sign-in/oracle-apex-sign-in?session=217799254972030)
+Workspace Name : First and Last Name combined, with spaces replaced by underscores. (for example, John Smith → JOHN_SMITH)
 
 ## Important Resources  
 
