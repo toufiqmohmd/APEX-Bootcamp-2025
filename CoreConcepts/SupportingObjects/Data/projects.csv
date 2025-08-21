@@ -1,0 +1,71 @@
+Project,Task Name,Start Date,End Date,Assigned To,Cost,Budget,STATUS
+ACME Web Express,Identify server requirements,7/17/2024,7/18/2024,John Watson,200,500,Closed
+ACME Web Express,Determine Web listener configuration(s),7/19/2024,7/19/2024,James Cassidy,600,500,On-Hold
+ACME Web Express,Run installation,7/22/2024,7/22/2024,James Cassidy,200,200,On-Hold
+ACME Web Express,Create pilot workspace,7/24/2024,7/24/2024,John Watson,100,100,Closed
+ACME Web Express,Specify security authentication scheme(s),7/29/2024,7/29/2024,John Watson,200,300,Closed
+ACME Web Express,Configure Workspace provisioning,7/30/2024,7/30/2024,John Watson,200,100,Closed
+ACME Web Express,"Select servers for Development, Test, Production",08/02/24,08/04/24,James Cassidy,200,600,Closed
+Bug Tracker,Document quality assurance procedures,06/02/24,06/05/24,Myra Sutcliff,"3,000","2,000",Closed
+Bug Tracker,Review automated testing tools,06/06/24,06/08/24,Myra Sutcliff,750,"1,500",Closed
+Bug Tracker,Implement bug tracking software,6/21/2024,6/21/2024,Myra Sutcliff,100,100,Closed
+Bug Tracker,Train developers on tracking bugs,6/28/2024,07/03/24,Myra Sutcliff,"1,000","2,000",Closed
+Bug Tracker,Measure effectiveness of improved QA,07/10/24,07/11/24,Myra Sutcliff,"10,00,000",500,On-Hold
+Client Server Conversion,End-user Training,08/12/24,08/12/24,Myra Sutcliff,0,"2,500",On-Hold
+Client Server Conversion,Rollout migrated Client Server in ACME Web Express,8/13/2024,8/13/2024,Pam King,0,200,Closed
+Client Server Conversion,User acceptance testing,08/06/24,08/08/24,Russ Saunders,0,"2,500",Closed
+Client Server Conversion,Test migrated applications,08/02/24,08/03/24,Russ Saunders,0,"6,000",Closed
+Client Server Conversion,Migrate Client Server applications,7/28/2024,7/31/2024,Pam King,300,"12,000",Closed
+Client Server Conversion,Plan migration schedule,7/23/2024,7/23/2024,Pam King,"1,000","1,000",Closed
+Client Server Conversion,Post-migration review,7/20/2024,7/20/2024,Pam King,500,300,Closed
+Client Server Conversion,Migrate pilot Client Server to ACME Web Express,7/16/2024,7/19/2024,Scott Spencer,"4,500","5,000",Closed
+Client Server Conversion,Identify pilot Client Server applications,7/14/2024,7/14/2024,Scott Spencer,200,200,Closed
+Convert Spreadsheets,Create ACME Web Express applications from spreadsheets,7/27/2024,7/31/2024,Pam King,"6,000","10,000",Closed
+Convert Spreadsheets,Send links to previous spreadsheet owners,08/02/24,08/02/24,Pam King,0,500,Open
+Convert Spreadsheets,Lock spreadsheets,7/19/2024,7/19/2024,Pam King,300,800,Closed
+Convert Spreadsheets,Collect mission-critical spreadsheets,7/16/2024,7/17/2024,Pam King,"2,500","4,000",On-Hold
+Discussion Forum,Identify owners,6/22/2024,6/22/2024,Hank Davis,250,300,Closed
+Discussion Forum,Install ACME Web Express application on internet server,6/28/2024,6/28/2024,Hank Davis,100,100,Open
+Discussion Forum,Monitor participation,7/28/2024,7/29/2024,Hank Davis,450,500,Open
+Email Integration,Check software licenses,07/12/24,07/12/24,Bob Nile,200,200,Open
+Email Integration,Purchase backup server,08/12/24,8/14/2024,Bob Nile,0,"3,000",Open
+Email Integration,Get RFPs for new server,7/26/2024,7/27/2024,Bob Nile,"2,000","1,000",Open
+Email Integration,Complete plan,07/09/24,07/10/24,Bob Nile,"3,000","1,500",Open
+Employee Satisfaction Survey,Review with legal,07/04/24,07/04/24,Irene Jones,200,400,Open
+Employee Satisfaction Survey,Complete questionnaire,07/02/24,07/03/24,Irene Jones,"1,200",800,Closed
+Employee Satisfaction Survey,Plan rollout schedule,07/05/24,07/05/24,Irene Jones,0,750,On-Hold
+Load Packaged Apps,Identify point solutions required,7/16/2024,7/16/2024,John Watson,200,300,Closed
+Load Packaged Apps,Install in development,7/17/2024,7/17/2024,John Watson,100,100,Open
+Load Packaged Apps,Customize solutions,7/20/2024,7/22/2024,John Watson,"1,500","4,000",Closed
+Load Packaged Apps,Implement in Production,7/23/2024,7/23/2024,John Watson,200,"1,500",Closed
+Load Packaged Apps,Train Administrators of Packaged Apps,7/25/2024,7/25/2024,John Watson,0,"1,000",Closed
+Maintain Support Systems,Investigate new Virus Protection software,08/12/24,8/13/2024,Pam King,"1,700","1,500",Closed
+Maintain Support Systems,HR software upgrades,6/25/2024,6/28/2024,Pam King,"8,000","7,000",Open
+Maintain Support Systems,Apply Billing System updates,6/29/2024,07/01/24,Russ Saunders,"9,500","7,000",Closed
+Maintain Support Systems,Arrange for vacation coverage,07/03/24,07/03/24,Al Bines,300,500,Open
+Migrate Desktop Application,User acceptance testing,08/11/24,08/12/24,Bob Nile,"1,500","6,000",Open
+Migrate Desktop Application,End-user Training,8/15/2024,8/16/2024,John Watson,0,"2,000",Open
+Migrate Desktop Application,Migrate desktop applications,08/05/24,08/09/24,Bob Nile,"1,000","8,000",Open
+Migrate Desktop Application,Plan migration schedule,7/13/2024,7/13/2024,Bob Nile,600,200,Open
+Migrate Desktop Application,Post-migration review,8/29/2024,8/30/2024,Bob Nile,100,100,Open
+Migrate Desktop Application,Identify pilot desktop applications,07/07/24,07/07/24,Bob Nile,300,500,Pending
+Migrate Desktop Application,Migrate pilot applications to ACME Web Express,07/09/24,07/10/24,Bob Nile,"1,250","1,500",Pending
+Migrate from Legacy Server,Migrate table structures,8/16/2024,8/17/2024,John Watson,0,"2,500",Pending
+Migrate from Legacy Server,Create DB Connection to new server,8/22/2024,8/22/2024,Scott Spencer,0,100,On-Hold
+Migrate from Legacy Server,Identify integration points,8/22/2024,8/23/2024,Bob Nile,0,"2,000",On-Hold
+Migrate from Legacy Server,Map data usage,8/19/2024,8/21/2024,Bob Nile,0,"8,000",Pending
+Migrate from Legacy Server,Obtain Legacy Server credentials,8/17/2024,8/17/2024,James Cassidy,0,500,Pending
+Migrate from Legacy Server,Import data,8/28/2024,8/29/2024,John Watson,0,"1,000",On-Hold
+Migrate from Legacy Server,Decommission Legacy Server,9/17/2024,9/17/2024,Al Bines,0,500,Pending
+Migrate from Legacy Server,Cut over to new database,09/03/24,09/03/24,Bob Nile,0,"1,500",On-Hold
+Migrate from Legacy Server,Notify users,09/02/24,09/02/24,Bob Nile,0,200,Pending
+Migrate from Legacy Server,Convert processes,8/28/2024,8/30/2024,Pam King,0,"3,000",Pending
+Public Website,Determine host server,07/02/24,07/02/24,Tiger Scott,200,200,Pending
+Public Website,Check software licenses,07/02/24,07/02/24,Tom Suess,100,100,Pending
+Public Website,"Purchase additional software licenses, if needed",07/03/24,07/04/24,Al Bines,300,"1,000",Pending
+Public Website,Develop web pages,7/29/2024,7/30/2024,Tiger Scott,0,"2,000",Pending
+Public Website,Plan rollout schedule,7/31/2024,7/31/2024,Tom Suess,0,100,Pending
+Software Project Tracking,Conduct project kickoff meeting,7/25/2024,7/25/2024,Pam King,100,100,Pending
+Software Project Tracking,"Enter base data (Projects, Milestones, etc.)",7/30/2024,7/30/2024,Tom Suess,200,200,Pending
+Software Project Tracking,Load current tasks and enhancements,08/01/24,08/01/24,Tom Suess,400,500,Pending
+Software Project Tracking,Customize Software Projects software,7/28/2024,7/29/2024,Tom Suess,600,"1,000",Pending
