@@ -1,4 +1,6 @@
-Use the scripts under "Supporting Objects" incase you have not completed the below from previous lab:
+Use the scripts under "Supporting Objects" incase you have not completed the below from previous lab.
+
+Upload all these 3 scripts under SQL Workshop > SQL Scripts".
 
 1. Creating Projects table from CSV (from previous lab). -- You would be needing this for the first workshop of this session, where we will making changes to the "Demo Projects" application, which we will create from the projects.csv file here.
 
