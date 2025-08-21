@@ -5,6 +5,8 @@ Central repo for APEX Bootcamp resources, scripts, and learning materials.
 
 | Time          | Session Title                                     |
 |---------------|--------------------------------------------------|
+| 10:00 - 10:30 | Oracle APEX Overview: Getting Started |
+| 10:30 - 11:00 | SQL Workshop |
 | 11:00 - 13:00 | Oracle APEX Core Concepts for Building Data Driven Apps |
 | 14:00 - 14:30 | Designing Secure APEX Apps with Built-in Features |
 | 14:30 - 15:00 | Themes, Templates & Template Components           |
