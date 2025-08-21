@@ -16,8 +16,9 @@ Central repo for APEX Bootcamp resources, scripts, and learning materials.
 | 17:00 - 17:30 | APEX Adoption, Opportunities and the Road Ahead   |
 
 ## Workspace Details
-[APEX URL](https://jb7mfvfk4wteln6-japacbootcamp.adb.us-ashburn-1.oraclecloudapps.com/ords/r/apex/workspace-sign-in/oracle-apex-sign-in?session=217799254972030)
-Workspace Name : First and Last Name combined, with spaces replaced by underscores. (for example, John Smith → JOHN_SMITH)
+- [APEX URL](https://jb7mfvfk4wteln6-japacbootcamp.adb.us-ashburn-1.oraclecloudapps.com/ords/r/apex/workspace-sign-in/oracle-apex-sign-in?session=217799254972030)
+- Workspace Name : First and Last Name combined, with spaces replaced by underscores. (for example, John Smith → JOHN_SMITH)
+- Password : (Will be shared at the Bootcamp)
 
 ## Important Resources  
 
