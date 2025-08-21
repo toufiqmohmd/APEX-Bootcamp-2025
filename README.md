@@ -24,6 +24,7 @@ Central repo for APEX Bootcamp resources, scripts, and learning materials.
 - Custom authentication and authorization notes  
 
 ### Themes, Templates & Template Components
+- [Demo Projects App Export](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol11.sql)
 - [Workshop Link](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3551&p210_wec=&session=13886981642268)  
 
 ### Business Process Automation with Workflows
