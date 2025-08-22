@@ -129,91 +129,8 @@ ALTER TABLE "ORDERS" ADD CONSTRAINT "ORDERS_STORE_ID_FK" FOREIGN KEY ( "STORE_ID
 ALTER TABLE "ORDER_ITEMS" ADD CONSTRAINT "ORDER_ITEMS_ORDER_ID_FK" FOREIGN KEY ( "ORDER_ID" ) REFERENCES "ORDERS" ( "ORDER_ID" ) ON DELETE CASCADE ENABLE;
 ALTER TABLE "ORDER_ITEMS" ADD CONSTRAINT "ORDER_ITEMS_PRODUCT_ID_FK" FOREIGN KEY ( "PRODUCT_ID" ) REFERENCES "PRODUCTS" ( "PRODUCT_ID" ) ON DELETE CASCADE ENABLE;
 
--- Triggers
-CREATE OR REPLACE EDITIONABLE TRIGGER "EMPLOYEES_BIU" BEFORE INSERT OR UPDATE ON EMPLOYEES FOR EACH ROW BEGIN :NEW.EMAIL := LOWER(:NEW.EMAIL); END EMPLOYEES_BIU;
-ALTER TRIGGER "EMPLOYEES_BIU" ENABLE;
-
 -- Indexes
 
--- Comments
-COMMENT ON COLUMN "ORDERS"."ORDER_ID" IS 'Auto-incrementing primary key';
-COMMENT ON COLUMN "ORDERS"."ORDER_DATETIME" IS 'When the order was placed';
-COMMENT ON COLUMN "ORDERS"."CUSTOMER_ID" IS 'Who placed this order';
-COMMENT ON COLUMN "ORDERS"."ORDER_STATUS" IS 'What state the order is in. Valid values are: OPEN - the order is in progress. PAID - money has been received from the customer for this order. SHIPPED - the products have been dispatched to the customer. COMPLETE - the customer has received the order. CANCELLED - the customer has stopped the order. REFUNDED - there has been an issue with the order and the money has been returned to the customer.';
-COMMENT ON COLUMN "ORDERS"."STORE_ID" IS 'Where this order was placed';
-COMMENT ON TABLE "ORDERS" IS 'Details of who made purchases where';
-
-COMMENT ON COLUMN "ORDER_ITEMS"."ORDER_ID" IS 'The order these products belong to';
-COMMENT ON COLUMN "ORDER_ITEMS"."LINE_ITEM_ID" IS 'An incrementing number, starting at one for each order';
-COMMENT ON COLUMN "ORDER_ITEMS"."PRODUCT_ID" IS 'Which item was purchased';
-COMMENT ON COLUMN "ORDER_ITEMS"."UNIT_PRICE" IS 'How much the customer paid for one item of the product';
-COMMENT ON COLUMN "ORDER_ITEMS"."QUANTITY" IS 'How many items of this product the customer purchased';
-COMMENT ON TABLE "ORDER_ITEMS" IS 'Details of which products the customer has purchased in an order';
-
-COMMENT ON COLUMN "PRODUCTS"."PRODUCT_ID" IS 'Auto-incrementing primary key';
-COMMENT ON COLUMN "PRODUCTS"."PRODUCT_NAME" IS 'What a product is called';
-COMMENT ON COLUMN "PRODUCTS"."UNIT_PRICE" IS 'The monetary value of one item of this producty';
-COMMENT ON COLUMN "PRODUCTS"."PRODUCT_DETAILS" IS 'Further details of the product stored in JSON format';
-COMMENT ON COLUMN "PRODUCTS"."PRODUCT_IMAGE" IS 'A picture of the product';
-COMMENT ON COLUMN "PRODUCTS"."IMAGE_MIME_TYPE" IS 'The mime-type of the product image';
-COMMENT ON COLUMN "PRODUCTS"."IMAGE_FILENAME" IS 'The name of the file loaded in the image column';
-COMMENT ON COLUMN "PRODUCTS"."IMAGE_CHARSET" IS 'The character set used to encode the image';
-COMMENT ON COLUMN "PRODUCTS"."IMAGE_LAST_UPDATED" IS 'The date the image was last changed';
-COMMENT ON TABLE "PRODUCTS" IS 'Details of goods that customers can purchase';
-
-COMMENT ON COLUMN "STORES"."STORE_ID" IS 'Auto-incrementing primary key';
-COMMENT ON COLUMN "STORES"."STORE_NAME" IS 'What the store is called';
-COMMENT ON COLUMN "STORES"."WEB_ADDRESS" IS 'The URL of a virtual store';
-COMMENT ON COLUMN "STORES"."PHYSICAL_ADDRESS" IS 'The postal address of this location';
-COMMENT ON COLUMN "STORES"."LATITUDE" IS 'The north-south position of a physical store';
-COMMENT ON COLUMN "STORES"."LONGITUDE" IS 'The east-west position of a physical store';
-COMMENT ON COLUMN "STORES"."LOGO" IS 'An image used by this store';
-COMMENT ON COLUMN "STORES"."LOGO_MIME_TYPE" IS 'The mime-type of the store logo';
-COMMENT ON COLUMN "STORES"."LOGO_FILENAME" IS 'The name of the file loaded in the image column';
-COMMENT ON COLUMN "STORES"."LOGO_CHARSET" IS 'The character set used to encode the image';
-COMMENT ON COLUMN "STORES"."LOGO_LAST_UPDATED" IS 'The date the image was last changed';
-COMMENT ON TABLE "STORES" IS 'Physical and virtual locations where people can purchase products';
-
-COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ORDER_ID" IS 'The primary key of the order';
-COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ORDER_DATETIME" IS 'The date and time the order was placed';
-COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ORDER_STATUS" IS 'The current state of this order';
-COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."CUSTOMER_ID" IS 'The primary key of the customer';
-COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."EMAIL_ADDRESS" IS 'The email address the person uses to access the account';
-COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."FULL_NAME" IS 'What this customer is called';
-COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ORDER_TOTAL" IS 'The total amount the customer paid for the order';
-COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ITEMS" IS 'A comma-separated list naming the products in this order';
-COMMENT ON TABLE "CUSTOMER_ORDER_PRODUCTS" IS 'A summary of who placed each order and what they bought';
-
-COMMENT ON COLUMN "PRODUCT_ORDERS"."PRODUCT_NAME" IS 'What this product is called';
-COMMENT ON COLUMN "PRODUCT_ORDERS"."ORDER_STATUS" IS 'The current state of these order';
-COMMENT ON COLUMN "PRODUCT_ORDERS"."TOTAL_SALES" IS 'The total value of orders placed';
-COMMENT ON COLUMN "PRODUCT_ORDERS"."ORDER_COUNT" IS 'The total number of orders placed';
-COMMENT ON TABLE "PRODUCT_ORDERS" IS 'A summary of the state of the orders placed for each product';
-
-COMMENT ON COLUMN "PRODUCT_REVIEWS"."PRODUCT_NAME" IS 'What this product is called';
-COMMENT ON COLUMN "PRODUCT_REVIEWS"."RATING" IS 'The review score the customer has placed. Range is 1-10';
-COMMENT ON COLUMN "PRODUCT_REVIEWS"."AVG_RATING" IS 'The mean of the review scores for this product';
-COMMENT ON COLUMN "PRODUCT_REVIEWS"."REVIEW" IS 'The text of the review';
-COMMENT ON TABLE "PRODUCT_REVIEWS" IS 'A relational view of the reviews stored in the JSON for each product';
-
-COMMENT ON COLUMN "STORE_ORDERS"."TOTAL" IS 'Indicates what type of total is displayed, including Store, Status, or Grand Totals';
-COMMENT ON COLUMN "STORE_ORDERS"."STORE_NAME" IS 'What the store is called';
-COMMENT ON COLUMN "STORE_ORDERS"."ADDRESS" IS 'The physical or virtual location of this store';
-COMMENT ON COLUMN "STORE_ORDERS"."LATITUDE" IS 'The north-south position of a physical store';
-COMMENT ON COLUMN "STORE_ORDERS"."LONGITUDE" IS 'The east-west position of a physical store';
-COMMENT ON COLUMN "STORE_ORDERS"."ORDER_STATUS" IS 'The current state of this order';
-COMMENT ON COLUMN "STORE_ORDERS"."ORDER_COUNT" IS 'The primary key of the order';
-COMMENT ON COLUMN "STORE_ORDERS"."TOTAL_SALES" IS 'The total value of orders placed';
-COMMENT ON TABLE "STORE_ORDERS" IS 'A summary of what was purchased at each location, including summaries each store, order status and overall total';
-
-COMMENT ON COLUMN "STORE_ORDERS_STATUS"."STORE_NAME" IS 'What the store is called';
-COMMENT ON COLUMN "STORE_ORDERS_STATUS"."ADDRESS" IS 'The physical or virtual location of this store';
-COMMENT ON COLUMN "STORE_ORDERS_STATUS"."LATITUDE" IS 'The north-south position of a physical store';
-COMMENT ON COLUMN "STORE_ORDERS_STATUS"."LONGITUDE" IS 'The east-west position of a physical store';
-COMMENT ON COLUMN "STORE_ORDERS_STATUS"."ORDER_STATUS" IS 'The current state of this order';
-COMMENT ON COLUMN "STORE_ORDERS_STATUS"."ORDER_COUNT" IS 'The primary key of the order';
-COMMENT ON COLUMN "STORE_ORDERS_STATUS"."TOTAL_SALES" IS 'The total value of orders placed';
-COMMENT ON TABLE "STORE_ORDERS_STATUS" IS 'A summary of what was purchased at each location for each order status';
 
 CREATE OR REPLACE PACKAGE MANAGE_ORDERS AS
   --------------------------------------------------------------
@@ -255,6 +172,159 @@ CREATE OR REPLACE PACKAGE MANAGE_ORDERS AS
 
 END MANAGE_ORDERS;
 /
+CREATE OR replace PACKAGE BODY manage_orders
+AS
+  PROCEDURE add_product (p_product  IN NUMBER,
+                        p_quantity IN NUMBER)
+  IS
+  BEGIN
+      IF NOT apex_collection.collection_exists (p_collection_name => 'PRODUCTS')
+      THEN
+        apex_collection.create_collection(p_collection_name => 'PRODUCTS');
+      END IF;
+
+      apex_collection.add_member(p_collection_name => 'PRODUCTS',
+      p_n001 => p_product,
+      p_n002 => p_quantity);
+  END add_product;
+
+  PROCEDURE remove_product (p_product IN NUMBER)
+  IS
+    l_id NUMBER;
+  BEGIN
+      IF apex_collection.Collection_exists (p_collection_name => 'PRODUCTS')
+      THEN
+        SELECT seq_id
+        INTO   l_id
+        FROM   apex_collections a
+        WHERE  collection_name = 'PRODUCTS'
+              AND a.n001 = p_product;
+
+        apex_collection.delete_member(p_collection_name => 'PRODUCTS',
+                                      p_seq => l_id);
+      END IF;
+  END remove_product;
+
+  FUNCTION get_quantity
+  RETURN NUMBER
+  IS
+    l_items NUMBER := 0;
+  BEGIN
+      IF apex_collection.collection_exists (p_collection_name => 'PRODUCTS')
+      THEN
+        SELECT SUM(n002)
+        INTO   l_items
+        FROM   apex_collections a
+        WHERE  collection_name = 'PRODUCTS';
+      END IF;
+
+      RETURN l_items;
+  END get_quantity;
+
+  FUNCTION product_exists(p_product IN NUMBER)
+  RETURN NUMBER
+  IS
+    l_quantity NUMBER;
+  BEGIN
+      IF apex_collection.collection_exists (p_collection_name => 'PRODUCTS')
+      THEN
+        SELECT a.n002
+        INTO   l_quantity
+        FROM   apex_collections a
+        WHERE  collection_name = 'PRODUCTS'
+              AND a.n001 = p_product;
+
+        RETURN l_quantity;
+      ELSE
+        RETURN 0;
+      END IF;
+  EXCEPTION
+    WHEN OTHERS THEN
+              RETURN 0;
+  END product_exists;
+
+  PROCEDURE clear_cart
+  IS
+  BEGIN
+      IF apex_collection.collection_exists (p_collection_name => 'PRODUCTS')
+      THEN
+        apex_collection.truncate_collection(p_collection_name => 'PRODUCTS');
+      END IF;
+  END clear_cart;
+
+  FUNCTION customer_exists(p_customer_email IN VARCHAR2)
+  RETURN NUMBER
+  IS
+    l_customer customers.customer_id%TYPE;
+  BEGIN
+      SELECT customer_id
+      INTO   l_customer
+      FROM   customers
+      WHERE  email_address = p_customer_email;
+
+      RETURN l_customer;
+  EXCEPTION
+    WHEN no_data_found THEN
+              RETURN 0;
+  END customer_exists;
+
+  PROCEDURE create_order (p_customer       IN VARCHAR2,
+                          p_customer_email IN VARCHAR2,
+                          p_store          IN NUMBER,
+                          p_order_id       OUT orders.order_id%TYPE,
+                          p_customer_id    OUT NUMBER)
+  IS
+  BEGIN
+      p_customer_id := customer_exists(p_customer_email);
+
+      IF p_customer_id = 0 THEN
+        INSERT INTO customers
+                    (full_name,
+                    email_address)
+        VALUES      (p_customer,
+                    p_customer_email)
+        returning customer_id INTO p_customer_id;
+      END IF;
+
+      INSERT INTO orders
+                  (order_datetime,
+                  customer_id,
+                  store_id,
+                  order_status)
+      VALUES      (SYSDATE,
+                  p_customer_id,
+                  p_store,
+                  'OPEN')
+      returning order_id INTO p_order_id;
+
+      IF apex_collection.collection_exists (p_collection_name => 'PRODUCTS')
+      THEN
+        INSERT INTO order_items
+                    (order_id,
+                    line_item_id,
+                    product_id,
+                    unit_price,
+                    quantity)
+        SELECT p_order_id,
+              seq_id,
+              p.product_id,
+              p.unit_price,
+              n002
+        FROM   apex_collections a,
+              products p
+        WHERE  collection_name = 'PRODUCTS'
+              AND p.product_id = a.n001;
+      END IF;
+
+      apex_collection.delete_collection(p_collection_name => 'PRODUCTS');
+  END create_order;
+END manage_orders;
+/
+
+
+-- Triggers
+-- CREATE OR REPLACE EDITIONABLE TRIGGER "EMPLOYEES_BIU" BEFORE INSERT OR UPDATE ON EMPLOYEES FOR EACH ROW BEGIN :NEW.EMAIL := LOWER(:NEW.EMAIL); END EMPLOYEES_BIU;
+-- ALTER TRIGGER "EMPLOYEES_BIU" ENABLE;
 
 CREATE OR REPLACE TRIGGER EMPLOYEES_BIU BEFORE
     INSERT OR UPDATE ON EMPLOYEES
@@ -263,6 +333,7 @@ BEGIN
     :NEW.EMAIL := LOWER(:NEW.EMAIL);
 END EMPLOYEES_BIU;
 /
+ALTER TRIGGER "EMPLOYEES_BIU" ENABLE;
 
 CREATE OR REPLACE FORCE EDITIONABLE VIEW "CUSTOMER_ORDER_PRODUCTS" (
     "ORDER_ID",
@@ -443,6 +514,87 @@ CREATE OR REPLACE FORCE EDITIONABLE VIEW "STORE_ORDERS_STATUS" (
         S.LONGITUDE,
         O.ORDER_STATUS;
 
+
+-- Comments
+COMMENT ON COLUMN "ORDERS"."ORDER_ID" IS 'Auto-incrementing primary key';
+COMMENT ON COLUMN "ORDERS"."ORDER_DATETIME" IS 'When the order was placed';
+COMMENT ON COLUMN "ORDERS"."CUSTOMER_ID" IS 'Who placed this order';
+COMMENT ON COLUMN "ORDERS"."ORDER_STATUS" IS 'What state the order is in. Valid values are: OPEN - the order is in progress. PAID - money has been received from the customer for this order. SHIPPED - the products have been dispatched to the customer. COMPLETE - the customer has received the order. CANCELLED - the customer has stopped the order. REFUNDED - there has been an issue with the order and the money has been returned to the customer.';
+COMMENT ON COLUMN "ORDERS"."STORE_ID" IS 'Where this order was placed';
+COMMENT ON TABLE "ORDERS" IS 'Details of who made purchases where';
+
+COMMENT ON COLUMN "ORDER_ITEMS"."ORDER_ID" IS 'The order these products belong to';
+COMMENT ON COLUMN "ORDER_ITEMS"."LINE_ITEM_ID" IS 'An incrementing number, starting at one for each order';
+COMMENT ON COLUMN "ORDER_ITEMS"."PRODUCT_ID" IS 'Which item was purchased';
+COMMENT ON COLUMN "ORDER_ITEMS"."UNIT_PRICE" IS 'How much the customer paid for one item of the product';
+COMMENT ON COLUMN "ORDER_ITEMS"."QUANTITY" IS 'How many items of this product the customer purchased';
+COMMENT ON TABLE "ORDER_ITEMS" IS 'Details of which products the customer has purchased in an order';
+
+COMMENT ON COLUMN "PRODUCTS"."PRODUCT_ID" IS 'Auto-incrementing primary key';
+COMMENT ON COLUMN "PRODUCTS"."PRODUCT_NAME" IS 'What a product is called';
+COMMENT ON COLUMN "PRODUCTS"."UNIT_PRICE" IS 'The monetary value of one item of this producty';
+COMMENT ON COLUMN "PRODUCTS"."PRODUCT_DETAILS" IS 'Further details of the product stored in JSON format';
+COMMENT ON COLUMN "PRODUCTS"."PRODUCT_IMAGE" IS 'A picture of the product';
+COMMENT ON COLUMN "PRODUCTS"."IMAGE_MIME_TYPE" IS 'The mime-type of the product image';
+COMMENT ON COLUMN "PRODUCTS"."IMAGE_FILENAME" IS 'The name of the file loaded in the image column';
+COMMENT ON COLUMN "PRODUCTS"."IMAGE_CHARSET" IS 'The character set used to encode the image';
+COMMENT ON COLUMN "PRODUCTS"."IMAGE_LAST_UPDATED" IS 'The date the image was last changed';
+COMMENT ON TABLE "PRODUCTS" IS 'Details of goods that customers can purchase';
+
+COMMENT ON COLUMN "STORES"."STORE_ID" IS 'Auto-incrementing primary key';
+COMMENT ON COLUMN "STORES"."STORE_NAME" IS 'What the store is called';
+COMMENT ON COLUMN "STORES"."WEB_ADDRESS" IS 'The URL of a virtual store';
+COMMENT ON COLUMN "STORES"."PHYSICAL_ADDRESS" IS 'The postal address of this location';
+COMMENT ON COLUMN "STORES"."LATITUDE" IS 'The north-south position of a physical store';
+COMMENT ON COLUMN "STORES"."LONGITUDE" IS 'The east-west position of a physical store';
+COMMENT ON COLUMN "STORES"."LOGO" IS 'An image used by this store';
+COMMENT ON COLUMN "STORES"."LOGO_MIME_TYPE" IS 'The mime-type of the store logo';
+COMMENT ON COLUMN "STORES"."LOGO_FILENAME" IS 'The name of the file loaded in the image column';
+COMMENT ON COLUMN "STORES"."LOGO_CHARSET" IS 'The character set used to encode the image';
+COMMENT ON COLUMN "STORES"."LOGO_LAST_UPDATED" IS 'The date the image was last changed';
+COMMENT ON TABLE "STORES" IS 'Physical and virtual locations where people can purchase products';
+
+COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ORDER_ID" IS 'The primary key of the order';
+COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ORDER_DATETIME" IS 'The date and time the order was placed';
+COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ORDER_STATUS" IS 'The current state of this order';
+COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."CUSTOMER_ID" IS 'The primary key of the customer';
+COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."EMAIL_ADDRESS" IS 'The email address the person uses to access the account';
+COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."FULL_NAME" IS 'What this customer is called';
+COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ORDER_TOTAL" IS 'The total amount the customer paid for the order';
+COMMENT ON COLUMN "CUSTOMER_ORDER_PRODUCTS"."ITEMS" IS 'A comma-separated list naming the products in this order';
+COMMENT ON TABLE "CUSTOMER_ORDER_PRODUCTS" IS 'A summary of who placed each order and what they bought';
+
+COMMENT ON COLUMN "PRODUCT_ORDERS"."PRODUCT_NAME" IS 'What this product is called';
+COMMENT ON COLUMN "PRODUCT_ORDERS"."ORDER_STATUS" IS 'The current state of these order';
+COMMENT ON COLUMN "PRODUCT_ORDERS"."TOTAL_SALES" IS 'The total value of orders placed';
+COMMENT ON COLUMN "PRODUCT_ORDERS"."ORDER_COUNT" IS 'The total number of orders placed';
+COMMENT ON TABLE "PRODUCT_ORDERS" IS 'A summary of the state of the orders placed for each product';
+
+COMMENT ON COLUMN "PRODUCT_REVIEWS"."PRODUCT_NAME" IS 'What this product is called';
+COMMENT ON COLUMN "PRODUCT_REVIEWS"."RATING" IS 'The review score the customer has placed. Range is 1-10';
+COMMENT ON COLUMN "PRODUCT_REVIEWS"."AVG_RATING" IS 'The mean of the review scores for this product';
+COMMENT ON COLUMN "PRODUCT_REVIEWS"."REVIEW" IS 'The text of the review';
+COMMENT ON TABLE "PRODUCT_REVIEWS" IS 'A relational view of the reviews stored in the JSON for each product';
+
+COMMENT ON COLUMN "STORE_ORDERS"."TOTAL" IS 'Indicates what type of total is displayed, including Store, Status, or Grand Totals';
+COMMENT ON COLUMN "STORE_ORDERS"."STORE_NAME" IS 'What the store is called';
+COMMENT ON COLUMN "STORE_ORDERS"."ADDRESS" IS 'The physical or virtual location of this store';
+COMMENT ON COLUMN "STORE_ORDERS"."LATITUDE" IS 'The north-south position of a physical store';
+COMMENT ON COLUMN "STORE_ORDERS"."LONGITUDE" IS 'The east-west position of a physical store';
+COMMENT ON COLUMN "STORE_ORDERS"."ORDER_STATUS" IS 'The current state of this order';
+COMMENT ON COLUMN "STORE_ORDERS"."ORDER_COUNT" IS 'The primary key of the order';
+COMMENT ON COLUMN "STORE_ORDERS"."TOTAL_SALES" IS 'The total value of orders placed';
+COMMENT ON TABLE "STORE_ORDERS" IS 'A summary of what was purchased at each location, including summaries each store, order status and overall total';
+
+COMMENT ON COLUMN "STORE_ORDERS_STATUS"."STORE_NAME" IS 'What the store is called';
+COMMENT ON COLUMN "STORE_ORDERS_STATUS"."ADDRESS" IS 'The physical or virtual location of this store';
+COMMENT ON COLUMN "STORE_ORDERS_STATUS"."LATITUDE" IS 'The north-south position of a physical store';
+COMMENT ON COLUMN "STORE_ORDERS_STATUS"."LONGITUDE" IS 'The east-west position of a physical store';
+COMMENT ON COLUMN "STORE_ORDERS_STATUS"."ORDER_STATUS" IS 'The current state of this order';
+COMMENT ON COLUMN "STORE_ORDERS_STATUS"."ORDER_COUNT" IS 'The primary key of the order';
+COMMENT ON COLUMN "STORE_ORDERS_STATUS"."TOTAL_SALES" IS 'The total value of orders placed';
+COMMENT ON TABLE "STORE_ORDERS_STATUS" IS 'A summary of what was purchased at each location for each order status';
+
 COMMENT ON COLUMN "CUSTOMERS"."CUSTOMER_ID" IS 'Auto-incrementing primary key';
 COMMENT ON COLUMN "CUSTOMERS"."FULL_NAME" IS 'What this customer is called';
 COMMENT ON COLUMN "CUSTOMERS"."EMAIL_ADDRESS" IS 'The email address the person uses to access the account';
@@ -539,4 +691,3 @@ CREATE INDEX "EMPLOYEES_I1" ON
     "EMPLOYEES" (
         "DEPARTMENT_ID"
     );
-
