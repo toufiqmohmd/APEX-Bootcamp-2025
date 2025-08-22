@@ -21,6 +21,8 @@ Central repo for APEX Bootcamp resources, scripts, and learning materials.
 - Username : Same as workspace name
 - Password : (Will be shared at the Bootcamp)
 
+- Note: Check your workspace name here -> [Workspace Names](https://github.com/toufiqmohmd/Oracle-APEX-Bootcamp-2025/blob/main/workspace_names.csv)
+
 ## Important Resources  
 
 ### SQL Workshop  
